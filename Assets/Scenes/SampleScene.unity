@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 526361381}
   - component: {fileID: 526361380}
   - component: {fileID: 526361379}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bounce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1312,7 +1312,7 @@ GameObject:
   - component: {fileID: 1272505718}
   - component: {fileID: 1272505717}
   - component: {fileID: 1272505716}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrarian
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2860,7 +2860,7 @@ GameObject:
   - component: {fileID: 1283465005}
   - component: {fileID: 1283465004}
   - component: {fileID: 1283465003}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
