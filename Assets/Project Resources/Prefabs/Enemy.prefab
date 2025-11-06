@@ -105,6 +105,8 @@ GameObject:
   - component: {fileID: 4886812987744726245}
   - component: {fileID: 8996156546682932883}
   - component: {fileID: 4330979253283363898}
+  - component: {fileID: 3242218779524424087}
+  - component: {fileID: 8924262752918876355}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -126,6 +128,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1210863370915856014}
+  - {fileID: 8918043747205221018}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5028432166537758065
@@ -302,3 +305,66 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _deathZone: {fileID: 4802866972132441092}
+--- !u!114 &3242218779524424087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4319726993808050803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd875acd88b89b4599cb1c31bb12f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weapon: {fileID: 8924262752918876355}
+  _waitTimeToAttack: 2
+--- !u!114 &8924262752918876355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4319726993808050803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d9c7cd22191e5846a5ce628f9489810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointRaycast: {fileID: 8918043747205221018}
+  _damage: 20
+  _distance: 2
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!1 &4376355849470641580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8918043747205221018}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8918043747205221018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4376355849470641580}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.537, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1293432624161828347}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
