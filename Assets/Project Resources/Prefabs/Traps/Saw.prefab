@@ -156,3 +156,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _typeTraps: {fileID: 11400000, guid: 145574bbf525dcb4ba861165f496479a, type: 2}
+  _attackTime: 2
