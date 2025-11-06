@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6035777679118957143}
   - component: {fileID: 8996506984719001828}
   - component: {fileID: 5043125754544702060}
+  - component: {fileID: 4417103463758137815}
   m_Layer: 0
   m_Name: Spike Head
   m_TagString: Untagged
@@ -152,3 +153,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4417103463758137815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6332057304994295179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd40cfca2d756f4f97ef6406d140650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _typeTraps: {fileID: 11400000, guid: 8e67b133807d48d4cb7c7179f53980a5, type: 2}

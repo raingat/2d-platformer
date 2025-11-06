@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 22161732263323713}
   - component: {fileID: 7271514600310711718}
   - component: {fileID: 4307238722396614806}
+  - component: {fileID: 6102608347175863793}
   m_Layer: 0
   m_Name: Saw
   m_TagString: Untagged
@@ -142,3 +143,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6102608347175863793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2478210977678307125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd40cfca2d756f4f97ef6406d140650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _typeTraps: {fileID: 11400000, guid: 145574bbf525dcb4ba861165f496479a, type: 2}
