@@ -7480,6 +7480,14 @@ PrefabInstance:
       propertyPath: _wayPoints.Array.data[1]
       value: 
       objectReference: {fileID: 1124089553}
+    - target: {fileID: 5028432166537758065, guid: ff12512d189543a41823ca0a3443f0f4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7166236263522030466, guid: 4c9cb1006f8432f479a7102860d38832, type: 3}
+    - target: {fileID: 5028432166537758065, guid: ff12512d189543a41823ca0a3443f0f4, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

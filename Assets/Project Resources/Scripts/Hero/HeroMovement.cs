@@ -15,7 +15,7 @@ public class HeroMovement : MonoBehaviour
 
     private float _direction;
 
-    private bool _isGrounded;
+    private bool _iGrounded;
 
     private void Awake()
     {
@@ -25,15 +25,15 @@ public class HeroMovement : MonoBehaviour
     private void Update()
     {
         _direction = _inputReader.GetHorizontalDirection();
-        _isGrounded = _groundChecker.IsGrounded();
+        _iGrounded = _groundChecker.IsGrounded();
 
-        if (_isGrounded)
+        if (_iGrounded)
         {
             _heroAnimation.PlayAnimationJump(false);
             TryMove(_direction);
         }
 
-        if (_inputReader.IsJump() && _isGrounded)
+        if (_inputReader.IsJump() && _iGrounded)
             Jump();
     }
 
