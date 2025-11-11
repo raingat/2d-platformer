@@ -4,14 +4,14 @@ public class Warehouse : MonoBehaviour
 {
     [SerializeField] private SpawnCollectItem _spawnCollectItem;
 
-    private Controller _controller;
+    private CounterController _controller;
 
     private void OnDisable()
     {
         _spawnCollectItem.Spawned -= OnSpawnedItem;
     }
 
-    public void Initialize(Controller controller)
+    public void Initialize(CounterController controller)
     {
         _controller = controller;
         _spawnCollectItem.Spawned += OnSpawnedItem;

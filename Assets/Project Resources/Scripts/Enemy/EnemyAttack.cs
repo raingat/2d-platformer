@@ -4,7 +4,6 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     [SerializeField] private Weapon _weapon;
-
     [SerializeField] private float _waitTimeToAttack;
 
     private WaitForSeconds _delay;

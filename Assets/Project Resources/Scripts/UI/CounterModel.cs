@@ -1,6 +1,6 @@
 using System;
 
-public class Model
+public class CounterModel
 {
     private int _count = 0;
 

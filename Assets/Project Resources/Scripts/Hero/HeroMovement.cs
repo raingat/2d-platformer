@@ -27,17 +27,16 @@ public class HeroMovement : MonoBehaviour
         _direction = _inputReader.GetHorizontalDirection();
         _iGrounded = _groundChecker.IsGrounded();
 
+        Move(_direction);
+
         if (_iGrounded)
-        {
             _heroAnimation.PlayAnimationJump(false);
-            TryMove(_direction);
-        }
 
         if (_inputReader.IsJump() && _iGrounded)
             Jump();
     }
 
-    private void TryMove(float direction)
+    private void Move(float direction)
     {
         if (CanMove(direction))
         {

@@ -1,8 +1,8 @@
-public class Controller
+public class CounterController
 {
-    private Model _model;
+    private CounterModel _model;
 
-    public Controller(Model model)
+    public CounterController(CounterModel model)
     {
         _model = model;
     }

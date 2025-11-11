@@ -1,18 +1,18 @@
 using TMPro;
 using UnityEngine;
 
-public class View : MonoBehaviour
+public class CounterView : MonoBehaviour
 {
     [SerializeField] private TMP_Text _text;
 
-    private Model _model;
+    private CounterModel _model;
 
     private void OnDisable()
     {
         _model.ChangedCount -= OnUpdateText;
     }
 
-    public void Initialize(Model model)
+    public void Initialize(CounterModel model)
     {
         _model = model;
         _model.ChangedCount += OnUpdateText;
