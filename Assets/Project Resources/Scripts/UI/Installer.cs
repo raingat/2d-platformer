@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Initializer : MonoBehaviour
+public class Installer : MonoBehaviour
 {
     [SerializeField] private View _view;
     [SerializeField] private Warehouse _warehouse;
@@ -12,6 +12,7 @@ public class Initializer : MonoBehaviour
     {
         _model = new Model();
         _controller = new Controller(_model);
+
         _view.Initialize(_model);
         _warehouse.Initialize(_controller);
     }

@@ -18,18 +18,12 @@ public class Weapon : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.DrawRay(_pointRaycast.position, transform.right * _distance, Color.yellow);
-
         _raycastHit = Physics2D.Raycast(_pointRaycast.position, transform.right, _distance, _layerMask);
 
         if (_raycastHit.collider != null)
-        {
             _canAttack = true;
-        }
         else
-        {
             _canAttack = false;
-        }
     }
 
     public void Attack()

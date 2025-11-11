@@ -28,10 +28,10 @@ public class HeroMovement : MonoBehaviour
         _isGrounded = _groundChecker.IsGrounded();
 
         if (_isGrounded)
+        {
             _heroAnimation.PlayAnimationJump(false);
-
-        if (_isGrounded)
             TryMove(_direction);
+        }
 
         if (_inputReader.IsJump() && _isGrounded)
             Jump();
@@ -65,20 +65,12 @@ public class HeroMovement : MonoBehaviour
 
     private void Rotate(float direction)
     {
-        float degreesRotate;
+        float degreesRotate = 0.0f;
 
         if (direction < 0.0f)
-        {
             degreesRotate = 180.0f;
 
-            transform.rotation = Quaternion.Euler(Vector2.up * degreesRotate);
-        }
-        else if (direction > 0.0f)
-        {
-            degreesRotate = 0.0f;
-
-            transform.rotation = Quaternion.Euler(Vector2.up * degreesRotate);
-        }
+        transform.rotation = Quaternion.Euler(Vector2.up * degreesRotate);
     }
 
     private void Jump()

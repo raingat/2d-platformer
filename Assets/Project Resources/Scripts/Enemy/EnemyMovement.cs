@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -29,19 +27,11 @@ public class EnemyMovement : MonoBehaviour
 
     private void Rotate(float xCoordinateTarget)
     {
-        float degreesRotate;
+        float degreesRotate = 0.0f;
 
-        if (xCoordinateTarget > transform.position.x)
-        {
-            degreesRotate = 0.0f;
-
-            transform.rotation = Quaternion.Euler(Vector2.up * degreesRotate);
-        }
-        else
-        {
+        if (xCoordinateTarget < transform.position.x)
             degreesRotate = 180.0f;
 
-            transform.rotation = Quaternion.Euler(Vector2.up * degreesRotate);
-        }
+        transform.rotation = Quaternion.Euler(Vector2.up * degreesRotate);
     }
 }
