@@ -3,14 +3,14 @@ using UnityEngine.Tilemaps;
 
 public class GroundChecker : MonoBehaviour
 {
-    [SerializeField] private float _radius;
+    [SerializeField] private float _distance;
     [SerializeField] private LayerMask _layerMask;
 
     public bool IsGrounded()
     {
-        Collider2D findCollider = Physics2D.OverlapCircle(transform.position, _radius, _layerMask);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, _distance, _layerMask);
 
-        if (findCollider != null && findCollider.TryGetComponent(out TilemapCollider2D _))
+        if (hit.collider != null && hit.transform.TryGetComponent(out TilemapCollider2D _))
             return true;
         else
             return false;
