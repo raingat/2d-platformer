@@ -1,11 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] private Transform[] _wayPoints;
-
     [SerializeField] private float _speed;
 
+    private List<Transform> _wayPoints;
     private int _currentWayPoint = 0;
 
     private void Update()
@@ -13,10 +13,15 @@ public class EnemyMovement : MonoBehaviour
         Move();
     }
 
+    public void Initialize(List<Transform> wayPoints)
+    {
+        _wayPoints = wayPoints;
+    }
+
     private void Move()
     {
         if (transform.position.x == _wayPoints[_currentWayPoint].position.x)
-            _currentWayPoint = (_currentWayPoint + 1) % _wayPoints.Length;
+            _currentWayPoint = (_currentWayPoint + 1) % _wayPoints.Count;
 
         Vector2 target = Vector2.one * new Vector2(_wayPoints[_currentWayPoint].position.x, transform.position.y);
 

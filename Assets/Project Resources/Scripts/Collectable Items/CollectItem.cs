@@ -13,6 +13,5 @@ public class CollectItem : MonoBehaviour, ICollectable
     private void Activate()
     {
         Collected?.Invoke(this);
-        gameObject.SetActive(false);
     }
 }

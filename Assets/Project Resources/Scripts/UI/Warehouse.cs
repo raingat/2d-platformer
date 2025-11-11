@@ -1,25 +1,30 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Warehouse : MonoBehaviour
 {
-    [SerializeField] private List<CollectItem> _items;
+    [SerializeField] private SpawnCollectItem _spawnCollectItem;
 
     private Controller _controller;
+
+    private void OnDisable()
+    {
+        _spawnCollectItem.Spawned -= OnSpawnedItem;
+    }
 
     public void Initialize(Controller controller)
     {
         _controller = controller;
-
-        foreach (CollectItem item in _items)
-        {
-            item.Collected += ChangeView;
-        }
+        _spawnCollectItem.Spawned += OnSpawnedItem;
     }
 
-    private void ChangeView(CollectItem collectItem)
+    private void OnSpawnedItem(CollectItem instance)
     {
-        collectItem.Collected -= ChangeView;
+        instance.Collected += ChangeView;
+    }
+
+    private void ChangeView(CollectItem instance)
+    {
+        instance.Collected -= ChangeView;
         _controller.Calculate();
     }
 }
